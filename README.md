@@ -2,7 +2,12 @@
 ### San José State University  
 **Instructor:** Prof. Chandrasekar Vuppalapati  
 **Course:** CMPE 256 – Recommender Systems  
-**Hackathon Dates:** November 1 – 2, 2025  
+**Hackathon Dates:** November 1 – 2, 2025
+## Team Members
+** 1. Venkata Rama Gowri Preetam
+** 2. Pratham Rajesh
+** 3. Shreram Palanisamy
+
 
 ---
 
@@ -42,6 +47,7 @@ When a customer adds items to the cart, the model recommends additional products
 
 ### ▶️ Demo Video
 📽️ **YouTube Demo:** [Project 1 – Electronic Item Checkout System](https://youtu.be/xno9zIfFzz4)
+📽️ **YouTube Demo:** [Project 2 – Medical AI Assistant](https://youtu.be/xno9zIfFzz4)
 
 ### 🖼️ UI Preview
 ![Electronic Checkout Portal UI](docs/project1_ui.png)
