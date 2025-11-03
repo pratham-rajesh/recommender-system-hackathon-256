@@ -47,7 +47,7 @@ When a customer adds items to the cart, the model recommends additional products
 
 ### ▶️ Demo Video
 📽️ **YouTube Demo:** [Project 1 – Electronic Item Checkout System](https://youtu.be/xno9zIfFzz4)
-📽️ **YouTube Demo:** [Project 2 – Medical AI Assistant](https://youtu.be/xno9zIfFzz4)
+📽️ **YouTube Demo:** [Project 2 – Medical AI Assistant]([https://youtu.be/xno9zIfFzz4](https://youtu.be/bfn9KeH422g))
 
 ### 🖼️ UI Preview
 ![Electronic Checkout Portal UI](docs/project1_ui.png)
@@ -63,3 +63,80 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run app.py
+
+## Part 2 – Clinical AI Assistant
+Goal
+Build a clinical question-answering assistant that retrieves evidence from structured clinical trial CSVs and unstructured research PDFs, then generates grounded answers with source citations using RAG (Retrieval-Augmented Generation).
+Approach
+Dual-path retrieval from structured CSVs (DuckDB/SQL) and unstructured PDFs (ChromaDB vector search with BGE-small embeddings).
+
+
+LLM generation via Groq (Llama-3.3-70B) with a strict “No Data” policy when evidence is lacking.
+
+
+Domain-aware routing (e.g., diabetes questions prioritize diabetes datasets first).
+
+
+Gradio UI with title generation, answer panel, and clickable citations.
+
+
+⚙️ Features
+Hybrid retrieval: semantic (ChromaDB + BGE-small-en-v1.5) + keyword SQL (DuckDB)
+
+
+Intelligent domain routing across Diabetes, COVID-19, Heart Attack, Knee Injuries
+
+
+PDF chunking + vector store with HNSW index in ChromaDB
+
+
+Grounded answers with inline citations to CSV rows and PDF snippets
+
+
+Dynamic title generation (e.g., “Treatment: Diabetes”, “Diagnosis: COVID-19”)
+
+
+Production-style Gradio UI with SJSU-themed layout
+
+
+“No Data” fallback when no supporting evidence is retrieved
+Tech Stack
+Python 3.10+ | pandas | duckdb | PyPDF2 | sentence-transformers (bge-small-en-v1.5) | chromadb | groq (Llama-3.3-70B) | gradio | Jupyter/Colab
+▶️ Demo Video
+Coming soon
+🖼️ UI Preview
+Coming soon
+
+How to Run (Google Colab)
+
+Open the Colab via the badge above.
+
+
+Mount Drive (the notebook includes a cell):
+
+ from google.colab import drive
+drive.mount('/content/drive')
+
+
+Set API Key for Groq:
+
+ import os
+os.environ["GROQ_API_KEY"] = "YOUR_KEY_HERE"
+
+
+Install dependencies (notebook cell installs: groq, chromadb, sentence-transformers, duckdb, PyPDF2, gradio).
+
+
+Run all cells to:
+
+
+Load CSVs into DuckDB
+
+
+Build/Load ChromaDB vector store with bge-small-en-v1.5
+
+
+Launch the Gradio app (provides a local and a public URL)
+
+
+Tip: First run builds embeddings (a few minutes). Later runs reuse cached vectors.
