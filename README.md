@@ -47,24 +47,12 @@ When a customer adds items to the cart, the model recommends additional products
 
 ### ▶️ Demo Video
 📽️ **YouTube Demo:** [Project 1 – Electronic Item Checkout System](https://youtu.be/xno9zIfFzz4)
-📽️ **YouTube Demo:** [Project 2 – Medical AI Assistant]([https://youtu.be/xno9zIfFzz4](https://youtu.be/bfn9KeH422g))
+📽️ **YouTube Demo:** [Project 2 – Medical AI Assistant](https://youtu.be/bfn9KeH422g)
 
 ### 🖼️ UI Preview
 ![Electronic Checkout Portal UI](docs/project1_ui.png)
 
-### 🧾 How to Run Locally
-```bash
-# Clone repository
-git clone https://github.com/<your-github-username>/<repo-name>.git
-cd <repo-name>
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the app
-streamlit run app.py
-
-## Part 2 – Clinical AI Assistant
+Part 2 – Clinical AI Assistant
 Goal
 Build a clinical question-answering assistant that retrieves evidence from structured clinical trial CSVs and unstructured research PDFs, then generates grounded answers with source citations using RAG (Retrieval-Augmented Generation).
 Approach
@@ -140,3 +128,17 @@ Launch the Gradio app (provides a local and a public URL)
 
 
 Tip: First run builds embeddings (a few minutes). Later runs reuse cached vectors.
+
+### 🧾 How to Run Locally
+```bash
+# Clone repository
+git clone https://github.com/<your-github-username>/<repo-name>.git
+cd <repo-name>
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+
+
