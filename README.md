@@ -52,8 +52,8 @@ When a customer adds items to the cart, the model recommends additional products
 ### 🖼️ UI Preview
 ![Electronic Checkout Portal UI](docs/project1_ui.png)
 
-Part 2 – Clinical AI Assistant
-Goal
+### Part 2 – Clinical AI Assistant
+## Goal
 Build a clinical question-answering assistant that retrieves evidence from structured clinical trial CSVs and unstructured research PDFs, then generates grounded answers with source citations using RAG (Retrieval-Augmented Generation).
 Approach
 Dual-path retrieval from structured CSVs (DuckDB/SQL) and unstructured PDFs (ChromaDB vector search with BGE-small embeddings).
